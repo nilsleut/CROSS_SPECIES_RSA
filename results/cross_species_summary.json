@@ -1,0 +1,300 @@
+{
+  "ranking_conservation": {
+    "V1/V1": {
+      "kendall_tau": 0.39999999999999997,
+      "p_analytic": 0.48333333333333334,
+      "p_permutation": 0.48333333333333334,
+      "permutation_type": "exhaustive",
+      "n_permutations": 120,
+      "human_ranking": [
+        "random",
+        "stdp",
+        "predictive_coding",
+        "backprop",
+        "feedback_alignment"
+      ],
+      "primate_ranking": [
+        "stdp",
+        "predictive_coding",
+        "random",
+        "feedback_alignment",
+        "backprop"
+      ],
+      "human_rhos": {
+        "backprop": 0.03346,
+        "feedback_alignment": 0.01173,
+        "predictive_coding": 0.05607,
+        "random": 0.07546,
+        "stdp": 0.06414
+      },
+      "primate_rhos": {
+        "backprop": 0.15841572209130828,
+        "feedback_alignment": 0.16105629804158964,
+        "predictive_coding": 0.20476655103162283,
+        "random": 0.1780692811910834,
+        "stdp": 0.30491929139987606
+      },
+      "mean_rho_difference": -0.15327342875109604,
+      "top1_match": false,
+      "top2_match": false,
+      "n_rules": 5
+    },
+    "V2/V2": {
+      "kendall_tau": -0.19999999999999998,
+      "p_analytic": 0.8166666666666667,
+      "p_permutation": 0.8166666666666667,
+      "permutation_type": "exhaustive",
+      "n_permutations": 120,
+      "human_ranking": [
+        "random",
+        "stdp",
+        "predictive_coding",
+        "backprop",
+        "feedback_alignment"
+      ],
+      "primate_ranking": [
+        "stdp",
+        "backprop",
+        "feedback_alignment",
+        "predictive_coding",
+        "random"
+      ],
+      "human_rhos": {
+        "backprop": 0.01846,
+        "feedback_alignment": 0.00394,
+        "predictive_coding": 0.0279,
+        "random": 0.04334,
+        "stdp": 0.03577
+      },
+      "primate_rhos": {
+        "backprop": 0.195648932973471,
+        "feedback_alignment": 0.1777811749275031,
+        "predictive_coding": 0.15585490388285417,
+        "random": 0.15168543116991437,
+        "stdp": 0.26847586504433457
+      },
+      "mean_rho_difference": -0.16400726159961543,
+      "top1_match": false,
+      "top2_match": false,
+      "n_rules": 5
+    },
+    "V4/V4": {
+      "kendall_tau": 0.19999999999999998,
+      "p_analytic": 0.8166666666666667,
+      "p_permutation": 0.8166666666666667,
+      "permutation_type": "exhaustive",
+      "n_permutations": 120,
+      "human_ranking": [
+        "stdp",
+        "random",
+        "predictive_coding",
+        "feedback_alignment",
+        "backprop"
+      ],
+      "primate_ranking": [
+        "stdp",
+        "predictive_coding",
+        "backprop",
+        "feedback_alignment",
+        "random"
+      ],
+      "human_rhos": {
+        "backprop": -0.001373713967814685,
+        "feedback_alignment": 0.006920752947131574,
+        "predictive_coding": 0.011726509956371896,
+        "random": 0.015771477574230683,
+        "stdp": 0.01724772202363933
+      },
+      "primate_rhos": {
+        "backprop": 0.0394995765651772,
+        "feedback_alignment": 0.039008675120227036,
+        "predictive_coding": 0.04357117400456118,
+        "random": 0.03801236480441579,
+        "stdp": 0.06161699624650652
+      },
+      "mean_rho_difference": -0.034283207641465786,
+      "top1_match": true,
+      "top2_match": false,
+      "n_rules": 5
+    },
+    "IT/IT": {
+      "kendall_tau": 0.0,
+      "p_analytic": 1.0,
+      "p_permutation": 1.0,
+      "permutation_type": "exhaustive",
+      "n_permutations": 120,
+      "human_ranking": [
+        "predictive_coding",
+        "backprop",
+        "stdp",
+        "feedback_alignment",
+        "random"
+      ],
+      "primate_ranking": [
+        "stdp",
+        "predictive_coding",
+        "random",
+        "feedback_alignment",
+        "backprop"
+      ],
+      "human_rhos": {
+        "backprop": 0.01325,
+        "feedback_alignment": 0.01156,
+        "predictive_coding": 0.01364,
+        "random": 0.00777,
+        "stdp": 0.01187
+      },
+      "primate_rhos": {
+        "backprop": 0.07283231342051905,
+        "feedback_alignment": 0.08923101141922177,
+        "predictive_coding": 0.12631703411521744,
+        "random": 0.10198889030051024,
+        "stdp": 0.13408957125589582
+      },
+      "mean_rho_difference": -0.09327376410227287,
+      "top1_match": false,
+      "top2_match": false,
+      "n_rules": 5
+    }
+  },
+  "v1_invariance": {
+    "human": {
+      "rhos": {
+        "backprop": 0.03346,
+        "feedback_alignment": 0.01173,
+        "predictive_coding": 0.05607,
+        "random": 0.07546,
+        "stdp": 0.06414
+      },
+      "rho_range": 0.06373,
+      "pairwise_overlaps": {},
+      "all_nonsignificant": null,
+      "interpretation": "differentiated"
+    },
+    "macaque": {
+      "rhos": {
+        "backprop": 0.15841572209130828,
+        "feedback_alignment": 0.16105629804158964,
+        "predictive_coding": 0.20476655103162283,
+        "random": 0.1780692811910834,
+        "stdp": 0.30491929139987606
+      },
+      "rho_range": 0.14650356930856778,
+      "pairwise_overlaps": {
+        "backprop_vs_feedback_alignment": 0.431,
+        "backprop_vs_predictive_coding": 0.087,
+        "backprop_vs_random": 0.328,
+        "backprop_vs_stdp": 0.0,
+        "feedback_alignment_vs_predictive_coding": 0.057,
+        "feedback_alignment_vs_random": 0.308,
+        "feedback_alignment_vs_stdp": 0.0,
+        "predictive_coding_vs_random": 0.889,
+        "predictive_coding_vs_stdp": 0.001,
+        "random_vs_stdp": 0.0
+      },
+      "all_nonsignificant": false,
+      "interpretation": "differentiated"
+    },
+    "cross_species_v1_invariance": false
+  },
+  "interaction_effects": {
+    "V1/V1": {
+      "backprop": {
+        "human_delta": -0.042,
+        "primate_delta": -0.01965355909977512,
+        "interaction": -0.022346440900224883
+      },
+      "feedback_alignment": {
+        "human_delta": -0.06373,
+        "primate_delta": -0.01701298314949376,
+        "interaction": -0.046717016850506235
+      },
+      "predictive_coding": {
+        "human_delta": -0.019389999999999998,
+        "primate_delta": 0.02669726984053944,
+        "interaction": -0.04608726984053944
+      },
+      "stdp": {
+        "human_delta": -0.011319999999999997,
+        "primate_delta": 0.12685001020879266,
+        "interaction": -0.13817001020879266
+      }
+    },
+    "V2/V2": {
+      "backprop": {
+        "human_delta": -0.024879999999999996,
+        "primate_delta": 0.043963501803556626,
+        "interaction": -0.06884350180355663
+      },
+      "feedback_alignment": {
+        "human_delta": -0.0394,
+        "primate_delta": 0.02609574375758872,
+        "interaction": -0.06549574375758871
+      },
+      "predictive_coding": {
+        "human_delta": -0.015439999999999995,
+        "primate_delta": 0.004169472712939798,
+        "interaction": -0.019609472712939793
+      },
+      "stdp": {
+        "human_delta": -0.007569999999999993,
+        "primate_delta": 0.1167904338744202,
+        "interaction": -0.1243604338744202
+      }
+    },
+    "V4/V4": {
+      "backprop": {
+        "human_delta": -0.017145191542045368,
+        "primate_delta": 0.0014872117607614074,
+        "interaction": -0.018632403302806775
+      },
+      "feedback_alignment": {
+        "human_delta": -0.00885072462709911,
+        "primate_delta": 0.0009963103158112455,
+        "interaction": -0.009847034942910355
+      },
+      "predictive_coding": {
+        "human_delta": -0.004044967617858787,
+        "primate_delta": 0.005558809200145391,
+        "interaction": -0.009603776818004178
+      },
+      "stdp": {
+        "human_delta": 0.0014762444494086473,
+        "primate_delta": 0.023604631442090726,
+        "interaction": -0.02212838699268208
+      }
+    },
+    "IT/IT": {
+      "backprop": {
+        "human_delta": 0.00548,
+        "primate_delta": -0.029156576879991195,
+        "interaction": 0.03463657687999119
+      },
+      "feedback_alignment": {
+        "human_delta": 0.003790000000000001,
+        "primate_delta": -0.012757878881288473,
+        "interaction": 0.016547878881288475
+      },
+      "predictive_coding": {
+        "human_delta": 0.005869999999999999,
+        "primate_delta": 0.0243281438147072,
+        "interaction": -0.0184581438147072
+      },
+      "stdp": {
+        "human_delta": 0.0041,
+        "primate_delta": 0.03210068095538558,
+        "interaction": -0.028000680955385583
+      }
+    }
+  },
+  "key_findings": [
+    "V1/V1: Top learning rule DIFFERS \u2014 human=random, macaque=stdp",
+    "  -> Rankings NOT significantly correlated (\u03c4=0.400, p=0.4833)",
+    "V2/V2: Top learning rule DIFFERS \u2014 human=random, macaque=stdp",
+    "  -> Rankings NOT significantly correlated (\u03c4=-0.200, p=0.8167)",
+    "V4/V4: Top learning rule is CONSERVED across species (stdp)",
+    "  -> Rankings NOT significantly correlated (\u03c4=0.200, p=0.8167)",
+    "IT/IT: Top learning rule DIFFERS \u2014 human=predictive_coding, macaque=stdp",
+    "  -> Rankings NOT significantly correlated (\u03c4=0.000, p=1.0000)"
+  ]
+}

@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+
+# Large data / model files (stored outside repo)
+*.npy
+*.pt
+results/features/
+
+# Runtime logs
+output_logs/
+
+# Internal audit files
+AUDIT_CHECK_RESULTS.md
+AUDIT_RESULTS.md
+
+# Paper 1 notebook (belongs in learning-rules-rsa repo)
+learning_rules_v8.ipynb
+
+# OS
+.DS_Store
+Thumbs.db

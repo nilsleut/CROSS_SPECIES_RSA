@@ -1,0 +1,136 @@
+# Cross-Species RSA Experiment Configuration
+# ============================================
+
+# Model settings
+model:
+  backbone: "resnet50"
+  pretrained_weights: "IMAGENET1K_V2"  # torchvision default
+  # Layers to extract features from (mapped to cortical regions)
+  extraction_layers:
+    - "layer1"   # → V1/V2
+    - "layer2"   # → V2/V4
+    - "layer3"   # → V4/LOC
+    - "layer4"   # → IT
+    - "avgpool"  # → IT (post-pooling)
+
+# Learning rules
+learning_rules:
+  - name: "backprop"
+    abbrev: "BP"
+    description: "Standard backpropagation (SGD)"
+    epochs: 30
+    lr: 0.01
+
+  - name: "feedback_alignment"
+    abbrev: "FA"
+    description: "Random feedback weights (Lillicrap et al. 2016)"
+    epochs: 30
+    lr: 0.01
+
+  - name: "predictive_coding"
+    abbrev: "PC"
+    description: "Predictive coding with inference steps (Whittington & Bogacz 2017)"
+    epochs: 30
+    lr: 0.01
+    inference_steps: 20
+    inference_lr: 0.1
+
+  - name: "stdp"
+    abbrev: "STDP"
+    description: "Spike-timing dependent plasticity approximation"
+    epochs: 30
+    lr: 0.001
+    tau_plus: 20.0   # ms
+    tau_minus: 20.0   # ms
+    a_plus: 0.01
+    a_minus: 0.012
+
+  - name: "random"
+    abbrev: "Random"
+    description: "Untrained random initialization (control)"
+    epochs: 0
+
+# Neural datasets
+datasets:
+  # === PRIMATE (Macaque) ===
+  majajhong2015:
+    species: "macaque"
+    regions: ["V4", "IT"]
+    identifier: "MajajHong2015.public"
+    temporal_identifier: "MajajHong2015.temporal.public"
+    stimulus_set: "hvm-public"
+    n_neurons_v4: 88
+    n_neurons_it: 168
+    n_presentations: 2560
+    visual_degrees: 8
+
+  freemanziemba2013:
+    species: "macaque"
+    regions: ["V1", "V2"]
+    identifier: "FreemanZiemba2013.public"
+    stimulus_set: "FreemanZiemba2013.aperture-public"
+    visual_degrees: 4
+    note: "Texture stimuli — different paradigm from object recognition. Use for V1/V2 only."
+
+  # === HUMAN ===
+  things_fmri:
+    species: "human"
+    regions: ["V1", "V2", "V4", "LOC", "IT"]
+    source: "hebart2023"  # or your existing THINGS pipeline
+    note: "Reuse from Paper 1"
+
+# RSA settings
+rsa:
+  distance_metric: "correlation"  # 1 - Pearson r
+  comparison_metric: "spearman"   # Spearman ρ between RDMs
+  n_bootstrap: 1000               # For confidence intervals (10K too slow on 3200×3200 RDMs)
+  alpha: 0.05
+
+# Cross-species analysis
+cross_species:
+  # Which regions to compare across species
+  region_mapping:
+    # human_region: primate_region
+    V1: "V1"   # FreemanZiemba -> THINGS V1
+    V2: "V2"   # FreemanZiemba -> THINGS V2
+    V4: "V4"   # MajajHong -> THINGS V4 (Conv2 features computed in pipeline)
+    IT: "IT"   # MajajHong -> THINGS IT
+  
+  # Statistical tests for ranking comparison
+  ranking_test: "kendall_tau"  # Kendall's τ on learning rule rankings
+  permutation_tests: 10000     # For significance
+
+# Layer-to-region mapping for RSA
+layer_region_mapping:
+  # For MajajHong (object stimuli): use deeper layers
+  majajhong2015:
+    V4: ["layer2", "layer3"]
+    IT: ["layer3", "layer4", "avgpool"]
+  
+  # For FreemanZiemba (texture stimuli): use early layers
+  freemanziemba2013:
+    V1: ["layer1"]
+    V2: ["layer1", "layer2"]
+  
+  # For THINGS-fMRI: full hierarchy
+  things_fmri:
+    V1: ["layer1"]
+    V2: ["layer1", "layer2"]
+    V4: ["layer2", "layer3"]
+    LOC: ["layer3", "layer4"]
+    IT: ["layer4", "avgpool"]
+
+# Output
+output:
+  results_dir: "results"
+  figures_dir: "figures"
+  save_rdms: true
+
+# Paper 1 THINGS-fMRI data (per-subject RDMs from outputs_720)
+things_fmri_dir: "C:/Users/nilsl/Desktop/Projekte/learning-rules-rsa/outputs_720"
+
+# THINGS-720 stimulus images (used for human V4 Conv2 feature extraction)
+things_images_dir: "C:/Users/nilsl/Desktop/Projekte/RSA/Datensatz/images_THINGS/object_images"
+
+# Paper 1 saved model weights (model_weights_{rule}.pt)
+paper1_weights_dir: "C:/Users/nilsl/Desktop/Projekte/learning-rules-rsa/outputs"

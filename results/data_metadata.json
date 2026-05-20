@@ -1,0 +1,39 @@
+{
+  "majajhong2015": {
+    "V4": {
+      "n_neurons": 88,
+      "n_stimuli": 3200,
+      "noise_ceiling": [
+        0.6036451855695909,
+        0.752841327996361
+      ]
+    },
+    "IT": {
+      "n_neurons": 168,
+      "n_stimuli": 3200,
+      "noise_ceiling": [
+        0.668771381182482,
+        0.8015134831813743
+      ]
+    }
+  },
+  "freemanziemba2013": {
+    "V1": {
+      "n_neurons": 102,
+      "n_stimuli": 135,
+      "noise_ceiling": [
+        0.3597079896774617,
+        0.529095941787896
+      ]
+    },
+    "V2": {
+      "n_neurons": 103,
+      "n_stimuli": 135,
+      "noise_ceiling": [
+        0.3269426892650415,
+        0.492775900436403
+      ]
+    }
+  },
+  "things_fmri": {}
+}
