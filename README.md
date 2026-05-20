@@ -19,7 +19,7 @@ We test whether the relationship between learning rules and brain alignment gene
 
 ### Learning rule profiles across the cortical hierarchy
 
-<img width="1639" height="680" alt="image" src="https://github.com/user-attachments/assets/352d617f-6ab0-47a7-b568-c31bd5acbb59" />
+<img width="1716" height="472" alt="image" src="https://github.com/user-attachments/assets/097669e6-394a-4916-bdab-abcb25e84a3d" />
 
 **Left:** Human fMRI (THINGS, 720 stimuli, 3 subjects). **Right:** Macaque electrophysiology (MajajHong2015 + FreemanZiemba2013). Grey band: noise ceiling (split-half, Spearman–Brown corrected).
 
