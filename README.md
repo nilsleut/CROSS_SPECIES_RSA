@@ -1,5 +1,7 @@
 # Cross-Species RSA: Learning Rule Alignment Across Human fMRI and Macaque Electrophysiology
 
+> ⚠️ **Correction (August 2026).** The predictive-coding and STDP results in this repository are affected by an evaluation-mode defect: both model classes overrode `eval()` with a no-op, so their batch-normalization layers stayed in training mode during feature extraction and normalized each evaluation batch by its own statistics, while the random, backpropagation and feedback-alignment conditions used their stored running statistics. A correction note identifying the affected results accompanies the current arXiv version of this paper; because STDP and PC lead at V1/V2 in the results below, the cross-species claims that rest on those two conditions should be read against it. The repaired re-run, and the resolution analysis that came out of it, are at **[nilsleut/evaluation-resolution-rsa](https://github.com/nilsleut/evaluation-resolution-rsa)** ([arXiv:2608.12408](https://arxiv.org/abs/2608.12408)).
+
 **Nils Leutenegger** | Independent Researcher, Switzerland | [github.com/nilsleut](https://github.com/nilsleut)
 
 **Companion study (Paper 1):** [arXiv:2604.16875](https://arxiv.org/abs/2604.16875) — *Untrained CNNs Match Backpropagation at V1*
